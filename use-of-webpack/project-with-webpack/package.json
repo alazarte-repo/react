@@ -1,0 +1,21 @@
+{
+  "name": "project-with-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.2.3",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
+    "vue": "^3.2.47",
+    "webpack": "^5.82.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.2"
+  }
+}

@@ -1,0 +1,47 @@
+Webpack es un empaquetador de módulos, es decir, te permite generar un archivo único con todos aquellos módulos que necesita tu aplicación para funcionar. Para darte una idea, te permite incluir todos tus archivos javascript .js en un único archivo, incluso se pueden incluir hasta archivos de estilos .css en el mismo archivo, llamado *.bundle.js. Además se puede realizar otras tareas de optimización de los códigos, tales como la minificación y la compresión.
+Webpack es una herramienta configurable que nos ayudará a realizar algunas tareas básicas en el desarrollo Frontend en tareas automatizadas y preparar nuestra aplicación web para producción.
+
+Entry Point: Indican a Webpack los archivos de entrada para generar los paquetes o archivos *.bundle.js.
+Output: Indican a Webpack el lugar donde se colocarán los paquetes *.bundle.* que se hayan generado: JavaScript, CSS, HTML, etc.
+Loaders: Son las rutinas que hacen posible que Webpack cargué, transforme y procese todos los archivos o entradas.
+Plugins: Amplían las funcionalidades por defecto que incluye Webpack. Permiten realizar tareas en el código de nuestra aplicación como la optimización, minificación, ofuscación, por mencionar algunas.
+
+Ahora instalamos webpack:
+node >= 8.0 && npm >= 5.0
+
+npm i webpack webpack-cli
+npm i bootstrap vue --save-dev
+npm i style-loader css-loader --save-dev //La función de estos Loaders es la siguiente: style-loader inyecta CSS en el DOM y css-loader interpreta los @import y url() como import/require() y los resuelve.
+
+
+Generar el archivo (webpack.config.js) que almacena las configuraciones de webpack:
+
+
+
+Ejecutamos webpack:
+npx webpack (npm webpack me daba error, comando no reconocido por npm)
+
+Si deseamos realizar un cambio en nuestros estilos o en el código de nuestro proyecto sería muy tedioso estar ejecutando el comando webpack cada que realicemos un cambio, para solucionar esto, es más práctico y recomendable ejercutar el siguiente comando:
+npx webpack w
+Al hacer esto le estamos diciendo a Webpack que cada que haya un cambio en nuestros archivos de entrada o Entry Point, realice la construcción de nuestra salida o Output.
+
+Validar un webpack.config
+npx webpack t .\webpack.config.js
+
+Para reducir el tamaño lo primero que necesitamos hacer es separar los estilos en un paquete que contenga solo los estilos y otro paquete que contenga todos los scripts, de esa manera reduciremos el tamaño, para realizar esta funcionalidad ocuparemos instalar el siguiente plugin mini-css-extract-plugin:
+ npm i mini-css-extract-plugin --save-dev
+ npx webpack --mode=development or production (con este modo se reduce aun más)
+ Es necesario referenciar en el index.html ambos archivos (el .css y el .js generados en dist/)
+
+ Minificación
+Ahora nos enfocaremos en minificar el código para reducir aun más, el tamaño de los bundlers. Para los scripts o archivos .js no es necesario instalar ningun plugin o dependencia, pues Webpack es capaz de minificarlo y ofuscarlo simplemente estableciendo el modo de producción mode=production. Sin embargo los estilos o archivos .css requiere de un plugin.
+Por ejemplo: Si abrimos nuestro arhivo app.bundle.css y nos movemos hacia el final del archivo, notaremos que agregó nuestro archivo app.css sin realizar ninguna minificación
+A continuación instalaremos el plugin optimize-css-assets-webpack-plugin para realizar la minificación de los estilos:
+npm i optimize-css-assets-webpack-plugin --save-dev
+npx webpack --mode=development or production
+
+Webpack Bundle Analyzer
+En proyectos muy complejos configurar Webpack puede tomar bastante tiempo y esfuerzo, se llega a un punto en el que procesar mentalmente todo lo que hace cada Loader y cada Plugin es muy difícil. Afortunadamente podemos simplificar y analizar los resultados con webpack-bundle-analyzer.
+npm i webpack-bundle-analyzer --save-dev
+Y Ejecutamos el comando webpack en modo production.
+npx webpack --mode=production

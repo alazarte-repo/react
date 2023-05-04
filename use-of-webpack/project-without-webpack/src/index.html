@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webpack - Tutorial</title>
+    <!-- Begin: Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!-- End: Styles -->
+  </head>
+  <body>
+    <h1 class="text-center py-4">Mi Blog</h1>
+    <div id="app" class="card-deck px-4">
+      <card-item v-for="post in posts" v-bind:post="post">
+      </card-item>
+    </div>
+    <!-- Begin: Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+    <!-- End: Scripts -->
+  </body>
+</html>

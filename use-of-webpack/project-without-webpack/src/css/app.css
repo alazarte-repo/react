@@ -1,0 +1,12 @@
+/* src/css/app.css */
+/*!
+  * App.css v0.0.1
+  * (c) 2020 Victor Valencia Rico
+  * Released under the MIT License.
+  */
+body {
+  background-color: #efefef;
+}
+body > p {
+  color: #220052;
+}
