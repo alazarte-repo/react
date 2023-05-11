@@ -29,11 +29,11 @@ Validar un webpack.config
 npx webpack t .\webpack.config.js
 
 Para reducir el tamaño lo primero que necesitamos hacer es separar los estilos en un paquete que contenga solo los estilos y otro paquete que contenga todos los scripts, de esa manera reduciremos el tamaño, para realizar esta funcionalidad ocuparemos instalar el siguiente plugin mini-css-extract-plugin:
- npm i mini-css-extract-plugin --save-dev
- npx webpack --mode=development or production (con este modo se reduce aun más)
- Es necesario referenciar en el index.html ambos archivos (el .css y el .js generados en dist/)
+npm i mini-css-extract-plugin --save-dev
+npx webpack --mode=development or production (con este modo se reduce aun más)
+Es necesario referenciar en el index.html ambos archivos (el .css y el .js generados en dist/)
 
- Minificación
+Minificación
 Ahora nos enfocaremos en minificar el código para reducir aun más, el tamaño de los bundlers. Para los scripts o archivos .js no es necesario instalar ningun plugin o dependencia, pues Webpack es capaz de minificarlo y ofuscarlo simplemente estableciendo el modo de producción mode=production. Sin embargo los estilos o archivos .css requiere de un plugin.
 Por ejemplo: Si abrimos nuestro arhivo app.bundle.css y nos movemos hacia el final del archivo, notaremos que agregó nuestro archivo app.css sin realizar ninguna minificación
 A continuación instalaremos el plugin optimize-css-assets-webpack-plugin para realizar la minificación de los estilos:
