@@ -1,0 +1,58 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+
+.service-notification-container {
+  text-decoration: none !important;
+  & > div {
+    padding: 15px 35px 15px 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > i {
+      color: #8c909f;
+      font-size: 38px;
+    }
+
+    .service-notification-data {
+      margin-left: 10px;
+      margin-right: auto;
+
+      & > h4 {
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 400;
+        line-height: 14px;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 3px;
+      }
+
+      & > span {
+        font-size: 13px;
+        color: $secondary-text-color;
+        font-weight: 400;
+        line-height: 13px;
+      }
+    }
+    & > .icon-arrow {
+      font-size: 18px;
+    }
+  }
+
+}
+.service-notification-active {
+  & > div {
+    background-color: $card-secondary-title-color;
+    & > i {
+      color: #fff !important;
+    }
+    & > div {
+      h4 {
+        color: #fff !important;
+      }
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+}

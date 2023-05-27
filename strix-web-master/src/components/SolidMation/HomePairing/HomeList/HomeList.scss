@@ -1,0 +1,35 @@
+@import '~styles/variables.scss';
+
+.home-list-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+
+  & .home-list {
+      width: 50%;
+      display: block;
+      text-align: center;
+
+    & img {
+      max-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    & .home-item {
+      margin-bottom: 5px;
+      width: fit-content;
+      margin: auto;
+    }
+
+    & .draggable-item {
+      cursor: move;
+    }
+
+    & .division-line {
+      border-right: 1px solid;
+      border-right-color: $item-separator;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.services-tab-container {
+  flex: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  span {
+    @include font-properties(16px, #8C909F, 400, 14px);
+    display: block;
+  }
+
+  & > .container-list{
+    height: calc(100% - 91px ) !important;
+  }
+
+  .maintenance-image {
+    margin-top: 10%;
+    width: 100px;
+  }
+
+  .add-service-button {
+    background-color: $secondary-color;
+    border: none;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+
+    & > .icon {
+      display: inline-block;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: white;
+      background-color: darken($secondary-color, 15%);
+    }
+
+    &:disabled {
+      background-color: grey;
+    }
+  }
+
+  .agenda-reminder-container {
+    border-bottom: 1px solid $card-panel-bg;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    max-height: 122px;
+
+    &>div {
+      padding: 0px 20px;
+    }
+
+    .reminder-icon-container {
+      width: 80px;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .reminder-middle-container {
+      width: 100%;
+      margin: 0 5px;
+      padding: 0;
+      .progress-bar {
+        max-height: 12px;
+        background-color: $primary-color;
+      }
+    }
+
+    .reminder-service-icon {
+      display: inline-block;
+      font-size: 30pt;
+    }
+
+    h4 {
+      display: inline-block;
+      padding: 3% 0 0 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #5d5d5d;
+      font-weight: 400;
+      line-height: 15px;
+    }
+
+    span {
+      padding-bottom: 0;
+      display: block;
+      color: $primary-color;
+      font-size: 12px;
+      margin-bottom: 4%;
+    }
+
+    .progress {
+      max-height: 12px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .empty-reminders-container {
+    text-align: center;
+    span {
+      padding-bottom: 40px;
+      display: block;
+      padding-top: 20px;
+    }
+  }
+
+  .reminders-header {
+    width: 100%;
+    border-bottom: 1px solid $card-panel-bg;
+    background-color: #fff;
+    height: 68px;
+    margin: 0;
+
+    h4 {
+      display: inline-block;
+      margin: 0;
+      padding: 23px 0 0 23px;
+      position: relative;
+      @include font-properties(14px, #5d5d5d,400, 14px);
+    }
+
+    .add-service-button {
+      margin: 8px;
+    }
+  }
+
+  .modal-footer {
+    border-top: none;
+    .btn {
+      margin-right: 10%;
+    }
+  }
+}
+
+.services-modal {
+  height: 500px;
+  position: relative;
+
+  .service-item {
+    display: flex;
+    padding: 10px;
+
+    .checkbox {
+      margin-left: auto;
+    }
+  }
+
+  .timestamp {
+    @include font-properties(12px, #808080, 400, 12px);
+  }
+
+  h3 {
+    position: relative;
+    margin: 0 0 6px 0;
+    font-weight: 500;
+    @include font-properties(16px, #5D5D83, 400, 14px);
+  }
+
+  .description {
+    color: #bfbfbf;
+    margin-left: 0;
+  }
+}
+
+.config-modal {
+  margin-top: 5%;
+
+  span {
+    @include font-properties(16px, inherit, 400, 14px);
+  }
+
+  .input-group {
+    width: 40%;
+  }
+
+  .configuration-wrapper {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 5% 0;
+  }
+
+  .month-select {
+    max-width: 40%;
+  }
+
+  .configuration-wrapper-no-border{
+    display: block;
+    position: relative;
+    padding: 5% 0;
+  }
+}

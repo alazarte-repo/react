@@ -1,0 +1,17 @@
+@import '~styles/variables.scss';
+
+.go-arrow {
+  color: $text-grey;
+  font-size: 18px;
+  margin: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.rotated {
+    transform: rotate(180deg)
+  }
+
+  &:hover{
+    color: $primary-color;
+  }
+}

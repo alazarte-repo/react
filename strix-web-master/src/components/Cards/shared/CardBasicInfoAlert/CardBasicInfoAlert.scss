@@ -1,0 +1,108 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+
+.card-basic-info-alert {
+  padding: 10px 34px 15px 15px;
+  margin-right: 0;
+  position: relative;
+  background-color: $magenta;
+
+  .updated-time {
+    margin-top: 10px;
+    margin-right: 15%;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  .more-link-basic-alert {
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    a {
+      text-decoration: none;
+      height: 50px;
+      width: 50px;
+      display: inline-block;
+      font-size: 21px;
+      color: #FFF;
+      padding: 10px 34px 0 15px;
+      transition: transform 0.5s;
+      &.active{
+        transform: rotate(90deg);
+      }
+      .icon-arrow {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .card-basic-info-alert-content {
+    display: flex;
+    flex-direction: row;
+
+    & > .icon {
+      color: #FFF !important;
+      font-size: 32px;
+    }
+    .card-basic-info-alert-middle {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 35px;
+      flex-grow: 1;
+
+      .card-basic-info-name {
+        position: relative;
+        font-size: 16px;
+        color: #FFF !important;
+        font-weight: 500;
+        padding-bottom: 30px;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid white;
+
+        & > .icon {
+          font-size: 32px;
+        }
+
+        & > .basic-info-alert-name {
+          display:inline-block;
+          vertical-align: middle;
+        }
+
+        & > .basic-info-alert-timeago {
+          justify-content: flex-end;
+          font-size: 14px;
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+
+      .card-basic-info-alerts {
+        padding-left: 2px;
+        font-size: 15px;
+        color: #FFF;
+        font-weight: 300;
+        line-height: 15px;
+
+        span{
+          margin-top: 15px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.card-basic-info-description {
+  padding: 5px 10px 15px 15px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #343434;
+  font-weight: 300;
+  line-height: 15px;
+}

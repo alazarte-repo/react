@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: magenta-cli
+  namespace: {{ .magenta.namespace }}
+  labels:
+    app: magenta-cli
+    tier: ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/rewrite-target: /
+{{- if .magenta.enableTLS }}
+    kubernetes.io/tls-acme: "true"
+{{- else }}
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+{{- end }}
+spec:
+  rules:
+  - host: {{ .magenta.prefix }}clientes.{{ .magenta.domain }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: magenta-cli
+          servicePort: 80
+{{- if .magenta.enableTLS }}
+  tls:
+  - secretName: magenta-cli-tls
+    hosts:
+    - {{ .magenta.prefix }}clientes.{{ .magenta.domain }}
+{{- end }}

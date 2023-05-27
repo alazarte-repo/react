@@ -1,0 +1,68 @@
+@import '~styles/variables.scss';
+
+.stepper {
+  display:flex;
+  flex-direction: column;
+}
+
+.stepper-progress-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0px;
+  align-items: center;
+
+  & .dot-container {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  & .dot-bar {
+    display:flex;
+    align-items: center;
+
+    & .dot {
+      background-color: $mid-grey;
+      max-width: 25px;
+      min-width: 25px;
+      max-height: 25px;
+      min-height: 25px;
+      flex-grow: 1;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    & .bar {
+      background-color: #ddd;
+      flex-grow: 1;
+      height: 2px;
+    }
+  }
+
+  & .dot-bar.done {
+    & .dot {
+      background-color: $magenta;
+      transform-origin:left;
+      transition:background-color 1.5s ease;
+    }
+
+    & .bar {
+      background-color: $magenta;
+      transform-origin:left;
+      transition:background-color 1.5s ease;
+    }
+  }
+
+  & .stepper-label{
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

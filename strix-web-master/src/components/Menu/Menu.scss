@@ -1,0 +1,98 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.strix-menu-panel {
+  background: $secondary-color;
+  text-align: center;
+  position: relative;
+  height: 100%;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & > .align-to-bottom {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    li {
+      a {
+        display: block;
+        padding: 25px 0;
+        color: #FFF;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        @include transition-all(250ms);
+
+        &:hover {
+          text-decoration: none;
+          background-color: lighten($secondary-color, 10%);
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+
+        & > .icon {
+          font-size: 35px;
+          margin-bottom: 15px;
+          color: #FFFFFF;
+        }
+
+        & > span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .operaciones {
+    // padding-top: 294px;
+
+    a {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: none;
+    }
+  }
+
+  .active {
+    background-color: #4b536d;
+    color: #FFF;
+
+    a {
+      & > .icon {
+        color: #FFF;
+      }
+    }
+  }
+}
+.operaciones-modal{
+  .modal-dialog{
+    .modal-content{
+      .modal-body{
+        overflow-y: hidden;
+        height: auto;
+        text-align: center;
+        padding: 35px 15%;
+        a{
+          @include font-properties(14px, $primary-color, 600, 14px);
+        }
+        .btn-modal{
+          background-color: #e2147e;
+          font-size: 1em;
+          border: 0;
+          padding: 10px 30px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

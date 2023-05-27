@@ -1,0 +1,21 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.strix-header {
+  height: 80px;
+  padding-right: 10px;
+  @include strix-gradient-right;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .strix-logo {
+    display: inline-block;
+    margin-left: 18px;
+    flex-grow: 1;
+  }
+
+  .header-children {
+    display: flex;
+  }
+}

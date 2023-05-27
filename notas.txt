@@ -1,0 +1,15 @@
+Estructura de archivos en React: https://www.udemy.com/course/react-js-para-principiantes-desde-cero-curso-gratuito/learn/lecture/30473868#overview
+Tipos de componentes: https://www.udemy.com/course/react-js-para-principiantes-desde-cero-curso-gratuito/learn/lecture/30473880#overview
+Props: https://www.udemy.com/course/react-js-para-principiantes-desde-cero-curso-gratuito/learn/lecture/30473882#overview
+Layouts: https://www.youtube.com/watch?v=GYaCtgRtmO0&t=262s
+Redux (What it is): https://www.youtube.com/watch?v=j-jzI3wkkVk
+
+Redux (Sagas): https://www.youtube.com/watch?v=FVP8fpFDarI
+
+Vite: https://es.vitejs.dev/guide/
+
+Instalar Material UI:
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @mui/material @mui/styled-engine-sc styled-components
+yarn add @mui/icons-material
+

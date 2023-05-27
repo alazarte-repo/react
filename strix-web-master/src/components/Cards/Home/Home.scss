@@ -1,0 +1,6 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.active-thing-card {
+  border-left: 8px solid $card-secondary-title-color;
+}

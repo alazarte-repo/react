@@ -1,0 +1,48 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.notification-area {
+  a {
+    position: relative;
+    display: inline-block;
+    background: $magenta;
+    width: 70px;
+    height: 80px;
+    line-height: 80px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    @include transition-all(250ms);
+
+    &:hover {
+      background: darken($magenta, 20%);
+    }
+
+    & > .icon {
+      font-size: 38px;
+      vertical-align: middle;
+    }
+  }
+
+  .notification-number {
+    position: absolute;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    top: 42px;
+    left: 35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: $primary-color;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.notifications-modal-body {
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}

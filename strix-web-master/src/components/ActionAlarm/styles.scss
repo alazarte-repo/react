@@ -1,0 +1,17 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.action-container {
+  & > .active {
+    background-color: $primary-color;
+    color: #fff;
+  }
+  & > div {
+    background-color: $card-panel-bg;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    @include font-properties(14px, $secondary-text-color, 400, 14px);
+  }
+}

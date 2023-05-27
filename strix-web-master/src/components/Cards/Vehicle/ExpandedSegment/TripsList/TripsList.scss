@@ -1,0 +1,13 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.trips-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+
+  h4 {
+    margin-left: auto;
+    @include font-properties(14px, $card-secondary-title-color, 600, 14px);
+  }
+}

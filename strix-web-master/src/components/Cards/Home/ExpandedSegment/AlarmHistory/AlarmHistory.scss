@@ -1,0 +1,14 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.alarm-list-container {
+  padding: 10px 25px;
+
+  h4 {
+    @include font-properties(14px, $secondary-color, $roboto-bold, 14px);
+    margin-bottom: 25px;
+  }
+  .alarm-item-container{
+  }
+
+}

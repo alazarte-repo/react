@@ -1,0 +1,27 @@
+
+@import '~styles/variables.scss';
+
+.home-button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  margin-right: 8px;
+  align-items: center;
+  width: 100px;
+
+  & .label {
+    margin-top: 12px;
+    color: $text-grey;
+    white-space: normal;
+    font-weight: 500;
+  }
+
+  & .status-icon {
+    font-size: larger;
+    font-size: 23pt;
+    text-align: center;
+    color: $disabled-color;
+  }
+
+}
+

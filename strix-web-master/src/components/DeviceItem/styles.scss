@@ -1,0 +1,27 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.device-item-container{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom:solid 1px $card-panel-bg;
+  padding: 0 3%;
+  align-items: center;
+  height: 100px;
+  .device-item-label {
+    h4 {
+      @include font-properties(20px, $secondary-color, 500, 24px);
+    }
+    span {
+      @include font-properties(15px, $text-grey, 400, 24px);
+    }
+  }
+  .value-container-device {
+    margin-left: auto;
+    span {
+      @include font-properties(20px, $primary-color, 400, 24px);
+    }
+  }
+}

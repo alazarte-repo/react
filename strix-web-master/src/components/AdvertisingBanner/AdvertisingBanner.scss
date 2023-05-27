@@ -1,0 +1,60 @@
+@import '~styles/utils.scss';
+
+.bottom-banner {
+  @include strix-gradient-right;
+  height: 130px;
+  width: 100%;
+  cursor: pointer;
+
+  & a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;;
+
+    .icon-container {
+      display: flex;
+      justify-content: space-around;
+
+      & i {
+        color: white;
+        font-size: 32pt;
+      }
+    }
+
+    span {
+      color: white;
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+  }
+
+  .close-link {
+    cursor: pointer;
+    font-weight: bolder;
+    right: 0px;
+    position: absolute;
+    color:black;
+    font-size: 18pt;
+    text-shadow:
+     1px  1px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+  }
+
+}

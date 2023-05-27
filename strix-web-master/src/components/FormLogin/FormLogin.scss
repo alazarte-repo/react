@@ -1,0 +1,105 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+@import '~styles/screen-sizes.scss';
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 5rem;
+  height: 100%;
+
+  @include respond-to(less-smallest-screens) { padding: 5rem; }
+  @include respond-to(smallest-screens) { padding: 5rem 10rem; }
+  @include respond-to(small-screens) { padding: 5rem 10rem; }
+  @include respond-to(medium-screens) { padding: 5rem 10rem; }
+  @include respond-to(large-screens) { padding: 5rem; }
+  @include respond-to(largest-screens) { padding: 5rem; }
+
+  input[type=email],
+  input[type=password] {
+    height: 34px;
+    background-color: $footer-bg;
+    border-color: $footer-bg;
+    box-shadow: none;
+    @include font-properties(16px, #a3a3a3, 200);
+
+    &:focus{
+      border-color: $footer-bg;
+    }
+  }
+
+  .password-input {
+    margin-top: 2rem;
+    text-align: left;
+    text-align-last: left;
+  }
+
+  .forgot-password {
+    @include font-properties(12px, $secondary-color, 400, 12px);
+    font-size: 1em;
+    color: $secondary-color-2;
+    margin: 2rem 0;
+    align-self: flex-end;
+  }
+
+  .btn-login {
+    font-size: 1em;
+    border: 0;
+    height: 34px;
+
+    &.signin {
+      background-color: $primary-color;
+      margin-bottom: 10px;
+
+      &:hover {
+        background-color: darken($primary-color, 15%);
+      }
+    }
+
+    &.signup {
+      background-color: $dark-magenta;
+
+      &:hover {
+        background-color: darken($dark-magenta, 15%);
+      }
+    }
+  }
+
+  .js-form__err-animation {
+    animation: shake 150ms ease-in-out;
+  }
+
+  .login-form-error-wrapper {
+    justify-content: center;
+    max-width: calc(100% - 2em);
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .login-form-error {
+    background-color: #FB4F4F;
+    color: white;
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    user-select: none;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

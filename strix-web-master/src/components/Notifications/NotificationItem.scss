@@ -1,0 +1,109 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.notification-card {
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .notification-item-body {
+    padding: 20px;
+    position: relative;
+    cursor: default;
+    border-bottom: 1px solid $card-panel-bg;
+    display: flex;
+
+    .notification-data {
+      padding-left: 15px;
+      flex-grow: 1;
+    }
+
+    .more-info {
+      display: flex;
+      flex-direction: column;
+
+      .timestamp {
+        display: block;
+        text-align: right;
+        @include font-properties(12px, $text-grey, 400, 12px);
+      }
+
+      .go-details {
+        display: block;
+        text-align: right;
+        font-size: 16pt;
+        color: $text-grey;
+        margin-top: 15px;
+        cursor: pointer;
+
+        &:hover {
+          color: $magenta;
+        }
+      }
+    }
+
+    & > .icon {
+      font-size: 32px;
+      color: $text-grey;
+    }
+
+    h3 {
+      position: relative;
+      margin: 0 0 6px 0;
+      font-weight: 500;
+      @include font-properties(16px, $text-grey, 400, 14px);
+    }
+
+    .description {
+      color: $text-grey;
+    }
+  }
+
+  &.recent {
+    .notification-item-body {
+      background: $soft-highlight-color;
+
+      & > .icon {
+        color: $secondary-color;
+      }
+
+      .timestamp {
+        color: $magenta;
+      }
+
+      h3 {
+        color: $magenta;
+      }
+
+      .description {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &.active {
+    text-decoration: none;
+
+    .notification-item-body {
+      background: $secondary-color;
+      text-decoration: none;
+
+      & > .icon {
+        color: white;
+      }
+
+      .timestamp {
+        color:  white;
+      }
+
+      h3 {
+        color:  white;
+      }
+
+      .description {
+        color:  white;
+      }
+    }
+  }
+}

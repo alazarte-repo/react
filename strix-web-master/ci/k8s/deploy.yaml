@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magenta-cli
+  namespace: {{ .magenta.namespace }}
+  labels:
+    app: magenta-cli
+    tier: frontend
+spec:
+  replicas: {{ .magenta.replicas }}
+  selector:
+    matchLabels:
+      app: magenta-cli
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: magenta-cli
+        tier: frontend
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry
+{{- if .magenta.useNodeSelector }}
+      nodeSelector:
+        magenta_services: "true"
+{{- end }}
+      containers:
+      - name: magenta-cli
+        image: registry.gitlab.com/leapsight-lojack/strix-web:{{ .build.hash }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: frontend
+          protocol: TCP
+        env:
+        - name: BASE_URL
+          value: "https://{{ .magenta.prefix }}api.{{ .magenta.domain }}"
+        - name: CLIENT_KEY
+          valueFrom:
+            secretKeyRef:
+              name: magenta
+              key: strixweb_client_id
+        - name: CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: magenta
+              key: strixweb_client_secret
+        - name: GOOGLE_ANALYTICS_TRACK_ID
+          valueFrom:
+            secretKeyRef:
+              name: magenta
+              key: strixweb_google_analytics_track_id
+        - name: GOOGLE_TAG_MANAGER_ID
+          valueFrom:
+            secretKeyRef:
+              name: magenta
+              key: strixweb_google_tag_manager_id
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          timeoutSeconds: 5
+{{- if .magenta.enableQos }}
+        resources:
+          limits:
+            memory: {{ .magenta.resources.limits.memory }}
+            cpu: {{ .magenta.resources.limits.cpu }}
+          requests:
+            memory: {{ .magenta.resources.requests.memory }}
+            cpu: {{ .magenta.resources.requests.cpu }}
+{{- end }}

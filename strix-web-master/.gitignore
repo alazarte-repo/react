@@ -1,0 +1,23 @@
+# Project files
+.idea/*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Production directory
+dist
+
+# Coverage directory
+coverage
+
+# Mock API directory
+api/*
+
+
+npm-debug.log
+npm-debug.log.2979938726
+npm-debug.log.3041784862
+yarn-error.log

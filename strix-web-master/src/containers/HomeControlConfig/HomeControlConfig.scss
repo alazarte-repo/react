@@ -1,0 +1,11 @@
+@import '~styles/variables.scss';
+
+.home-control-config-container {
+    height: 100%;
+    background: $primary-background-color;
+
+    & > .title-container {
+        background: $footer-bg;
+        min-height: 68px;
+    }
+}

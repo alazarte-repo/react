@@ -1,0 +1,22 @@
+@import '~styles/variables.scss';
+
+.pin-confirmation-modal {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $secondary-color;
+
+    & > input {
+      margin: 10px auto;
+      margin-bottom: 20px;
+      width: 250px;
+    }
+
+    & > .btn {
+      width: 100px;
+      font-size: 14px;
+      padding: 5px 20px;
+    }
+  }
+}

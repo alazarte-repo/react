@@ -1,0 +1,14 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.scort-sumary-container {
+  padding: 20px 25px;
+  border-bottom: solid 1px #E4E4E4;
+  & > span {
+    font-weight: 500;
+  }
+  & > p {
+    margin: 20px 0;
+  }
+}

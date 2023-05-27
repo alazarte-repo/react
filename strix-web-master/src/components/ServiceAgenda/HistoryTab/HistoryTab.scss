@@ -1,0 +1,51 @@
+@import '~styles/variables.scss';
+
+.history-tab-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1px;
+  color: #8C8C8C;
+
+  .empty-list {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.history-service-item {
+  padding: 15px;
+  border-bottom: 1px solid $item-separator;
+  display: flex;
+
+  .icon-container {
+    width: fit-content;
+    text-align: center;
+
+    & .service-icon {
+      display: inline-block;
+      font-size: 30pt;
+    }
+  }
+
+  .history-service-name {
+    flex-grow: 1;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+  }
+
+  .history-service-data {
+    flex-shrink: 1;
+
+    .history-service-date {
+      color: #1f2848;
+    }
+
+    .history-service-mileage {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '~styles/variables.scss';
+
+.working-icon {
+  width: inherit;
+  height: inherit;
+  background: $primary-background-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > span {
+    font-size: larger;
+    color: $text-grey;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+  }
+
+  & .loading-icon {
+    text-align: center;
+    color: $primary-color;
+    align-self: center;
+  }
+}

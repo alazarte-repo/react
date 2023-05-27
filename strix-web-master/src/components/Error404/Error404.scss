@@ -1,0 +1,28 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.error404-container{
+  padding: 25px 50px 50px 50px;
+
+  h1, h2{
+    @include font-properties(24px, $primary-color, 500, 24px);
+    margin: 10px 0;
+  }
+  h2{
+    margin-bottom: 60px;
+  }
+  p{
+    @include font-properties(15px, $secondary-color, 400, 25px);
+    margin-bottom: 40px;
+    width: 30%;
+  }
+
+  .btn-back{
+    background-color: $primary-color;
+    font-size: 1em;
+    border: 0;
+    width: 20%;
+  }
+
+}

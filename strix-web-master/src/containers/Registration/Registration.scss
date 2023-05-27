@@ -1,0 +1,110 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.registration-form-container{
+  padding: 25px 50px 50px 50px;
+
+  h1{
+    @include font-properties(24px, $primary-color, 500, 24px);
+    margin-bottom: 40px;
+  }
+  p{
+    @include font-properties(15px, $secondary-color, 400, 15px);
+    margin-bottom: 60px;
+  }
+  .breadcrumb-container{
+    margin-bottom: 30px;
+    .step-container{
+      display: inline-block;
+      margin-right: 15px;
+      .step{
+        position: relative;
+        margin-right: 15px;
+        color: #FFF;
+        z-index: 99;
+        &:before{
+          position: absolute;
+          top: -3px;
+          left: -7px;
+          content: '';
+          width: 22px;
+          height: 22px;
+          background-color: $secondary-color;
+          border-radius: 50%;
+          z-index: -1;
+        }
+      }
+      .title{
+        margin-right: 15px;
+      }
+    }
+    .active{
+      .step{
+        &:before{
+          background-color: $primary-color;
+        }
+      }
+      .title{
+        color: $primary-color;
+      }
+    }
+  }
+  .form-login{
+    padding: 0;
+
+    input[type=password] {
+      width: 35%;
+    }
+    .btn-forgot-passwd{
+      background-color: $primary-color;
+      font-size: 1em;
+      border: 0;
+      width: 20%;
+      margin-top: 4rem;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .registration-form-container{
+    width: 100%;
+    font-size: 12px;
+    padding: 15px 15px;
+
+    h1{
+      @include font-properties(17px, $primary-color, 500, 24px);
+      margin-bottom: 15px;
+    }
+    p{
+      max-width: 200px;
+      @include font-properties(11px, $secondary-color, 400, 15px);
+      margin-bottom: 20px;
+    }
+    .breadcrumb-container{
+      font-size: 10px;
+      .step-container{
+        margin-right: 7px;
+        .step{
+          margin-right: 10px;
+          &:before{
+            top: -2px;
+            left: -5px;
+            width: 15px;
+            height: 15px;
+          }
+        }
+        .title{
+          margin-right: 0px;
+        }
+      }
+    }
+    .form-login{
+      padding: 0;
+
+      input[type=password] {
+        width: 35%;
+      }
+    }
+  }
+}
+

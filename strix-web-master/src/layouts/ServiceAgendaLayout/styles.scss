@@ -1,0 +1,111 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.service-agenda-header {
+  display: flex;
+  height: 68px;
+  background-color: #F8F8F8;
+
+  & > .service-agenda-title {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    min-width: 100%;
+    padding: 0 25px;
+    a {
+      margin-right: 20px;
+      font-size: 18px;
+      color: $secondary-color;
+      transform: rotate(180deg);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      position: relative;
+      margin-bottom: 18px;
+      margin-right: auto;
+      @include font-properties(16px, $secondary-color, 500, 0);
+    }
+  }
+}
+.custom-panel-body {
+  display: flex;
+  flex-direction: column;
+
+  & > .acum-mileage-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    height: 50px;
+    padding: 15px 25px;
+    align-items: center;
+
+    h4 {
+      @include font-properties(16px, #8C8C8C, 500, 14px);
+    }
+
+    span {
+      @include font-properties(16px, #e10b81, 400, 14px);
+      margin-left: auto;
+    }
+  }
+
+  .tabs-container {
+    display: flex;
+    height: 50px;
+    background-color: #F8F8F8;
+
+    & > .tablinks {
+      flex: 1;
+      @include font-properties(16px, #8C8C8C, 400, 14px);
+      background-color: inherit;
+      cursor: pointer;
+      padding: 17px 16px;
+      transition: 0.3s;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        background-color: #ddd;
+      }
+
+      &:nth-child(2) {
+        border-left: 1px solid #E5E5E5;
+        border-right: 1px solid #E5E5E5;
+      }
+    }
+
+    .active {
+      background-color: #B7BAC3;
+      color: white;
+    }
+  }
+  .selected-container {
+    display: inherit;
+    flex: 1;
+    height: 1px;
+    flex-direction: column;
+    background-color: #FFF;
+
+    .loading {
+      display: flex;
+      flex-grow: 1;
+      height: 100%;
+    }
+  }
+
+  @-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+}
+
+

@@ -1,0 +1,40 @@
+.timeline-icon{
+  position: relative;
+  height: 19px;
+  width: 16px;
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+  svg{
+    position: relative;
+    z-index: 1;
+  }
+  &:before{
+    top: 6px;
+    left: 7px;
+    position: absolute;
+    height: 52px;
+    width: 2px;
+    background-color: #9f9f9f;
+    z-index: 1;
+    content: '';
+  }
+}
+.start{
+  &:before{
+    display: none;
+  }
+}
+.flex-end{
+  fill: #e01b80;
+  &:before{
+    display: none;
+  }
+}
+.end, .unlocked{
+  fill: #1f2848
+;
+}
+.end, .locked{
+  fill: #e01b80;
+}

@@ -1,0 +1,33 @@
+@import '~styles/variables.scss';
+
+.working-screen {
+  width: 100%;
+  height: 100%;
+  background: $primary-background-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > span {
+    font-size: larger;
+    color: $text-grey;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: auto;
+  }
+
+  & .icon-container {
+    margin-bottom: auto;
+    display: flex;
+
+    & .loading-icon {
+      font-size: 100pt;
+      text-align: center;
+      color: $primary-color;
+      align-self: center;
+    }
+  }
+}

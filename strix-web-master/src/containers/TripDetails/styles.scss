@@ -1,0 +1,59 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.trip-date {
+  @include font-properties(13px, $magenta, $roboto-light, 13px);
+  margin-left: 20px;
+}
+
+.btn-close{
+  color: #1f2848;
+  text-decoration: none;
+}
+
+.trip-details-container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .trip-details-info{
+    background-color: #FFF;
+    padding: 20px 30px;
+    .data-container{
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+
+      .data{
+        @include font-properties(14px, #696868, $roboto-regular, 14px);
+      }
+
+      .title{
+        @include font-properties(12px, #d1d1d1, $roboto-light, 10px);
+      }
+    }
+  }
+
+  .map-container{
+    flex-grow: 1;
+    position: relative;
+  }
+  .tooltip-trips-details {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $secondary-color ;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 80px;
+    padding: 5px;
+    & > span {
+      @include font-properties(12px, $primary-color, $roboto-regular, 12px);
+    }
+  }
+}

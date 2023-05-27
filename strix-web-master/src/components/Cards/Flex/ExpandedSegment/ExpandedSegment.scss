@@ -1,0 +1,13 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+
+.flex-expanded-container {
+  .service-notification-container {
+
+      h4 {
+          &:before {
+            background: no-repeat url("~images/alarm_icon.svg") #FFF;
+          }
+      }
+  }
+}

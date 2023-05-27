@@ -1,0 +1,73 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+
+.geofence-configuration-header {
+  display: flex;
+  height: 68px;
+  & > .geofence-configuration-title {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    min-width: 100%;
+    padding: 0 25px;
+    a {
+      margin-right: 20px;
+      font-size: 18px;
+      color: $secondary-color;
+      transform: rotate(180deg);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      position: relative;
+      margin-bottom: 18px;
+      margin-right: auto;
+      @include font-properties(16px, $secondary-color, 500, 0);
+    }
+
+    button {
+      max-height: 30px;
+      align-content: center;
+      &:hover {
+        background-color: darken($primary-color, 15%);
+      }
+    }
+  }
+}
+
+.geofence-configuration-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 68px;
+  padding: 10px 25px;
+  @include font-properties(14px, $secondary-text-color, $roboto-regular, 14px);
+  span {
+    margin-right: auto;
+  }
+}
+
+.confirmation-modal {
+  & > div > div {
+    height: 200px;
+  }
+  & > div > div > .modal-body {
+    display: flex;
+    flex-direction: column;
+    max-height: 120px;
+    align-items: center;
+    @include font-properties(18px, $secondary-text-color, $roboto-regular, 25px);
+    button {
+      margin-top: 5px;
+      background-color: $primary-color;
+      border: none;
+    }
+    span {
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

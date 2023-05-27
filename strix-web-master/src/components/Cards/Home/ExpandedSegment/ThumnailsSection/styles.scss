@@ -1,0 +1,84 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+
+.thumbnails-container {
+  display: block;
+	background: $footer-bg;
+	padding-top: 15px;
+	padding-right: 15px;
+
+  & .camera-thumbnail {
+		cursor: default;
+		display: flex;
+		position: relative;
+		float: left;
+		margin-right: 20px;
+		flex:0;
+		flex-direction: column;
+		align-items: center;
+		width: 195px;
+		height: 135px;
+
+		& > span {
+			position: absolute;
+			bottom: 0;
+			@include font-properties(15px, $dark-text, 400, 15px);
+			padding: 5px 0;
+		}
+
+		& > img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: inherit;
+			height: 105px;
+			border: 1px solid black;
+		}
+
+		& .icon-blocked {
+			position: absolute;
+			font-size: 20pt;
+			z-index:2;
+			top: 25px;
+			text-shadow: -1px 0 $mid-grey, 0 1px $mid-grey, 1px 0 $mid-grey, 0 -1px $mid-grey;
+		}
+
+		& .no-connection-label {
+			font-weight: bold;
+			top: 65px;
+			height: fit-content;
+			text-shadow: -1px 0 $mid-grey, 0 1px $mid-grey, 1px 0 $mid-grey, 0 -1px $mid-grey;
+		}
+	}
+}
+
+.camera-segment {
+	display: flex;
+	flex-direction: column;
+	background-color: $footer-bg;
+	@include font-properties(15px, #5d5d5d, 400, 15px);
+	padding: 10px 15px 10px 15px;
+
+	text-decoration: none;
+	& .header {
+	  display: block;
+
+	  & .title {
+			color: $primary-color;
+			font-weight: 500;
+			float: left;
+	  }
+
+	  & .movement-sensor {
+			  float: right;
+			  font-size: 10pt;
+			  color: $secondary-color;
+
+			& > a > span {
+						background-color: $primary-color;
+						margin-left: 3px;
+			}
+	  }
+	}
+}

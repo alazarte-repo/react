@@ -1,0 +1,18 @@
+@import "~styles/variables.scss";
+@import "~styles/utils.scss";
+
+.offlineIndicatorLabel {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 36px 10px 15px;
+  align-items: center;
+  @include font-properties(14px, $card-primary-text-color, 400, 15px);
+  & > .icon {
+    height: 22px;
+    font-size: 22px;
+    color: #8c909f;
+  }
+  & > div {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.container-battery-indicator {
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: row;
+  align-items: center;
+  background-color: $footer-bg;
+
+  .icon {
+    color: #8c909f;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .indicator-container {
+    display: flex;
+    flex-direction: column;
+
+    .indicator-percentage {
+      @include font-properties(15px, $card-primary-text-color, 400, 16px);
+    }
+
+    .indicator-data {
+      @include font-properties(13px, $card-secondary-text-color, 300, 13px);
+    }
+  }
+}

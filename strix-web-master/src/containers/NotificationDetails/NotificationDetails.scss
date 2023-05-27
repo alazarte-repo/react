@@ -1,0 +1,41 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.notification-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .timestamp {
+    text-align: right;
+    width: 100%;
+    color: $dark-text;
+    padding: 5px 10px;
+  }
+
+  .notification-title {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    & > .icon {
+      font-size: 32px;
+      color: $dark-text;
+      margin: 0 15px;
+    }
+
+    & > .information {
+      color: $dark-text;
+      h3 {
+        position: relative;
+        margin: 0 0 6px 0;
+        @include font-properties(16px, $dark-text, 500, 14px);
+      }
+    }
+  }
+
+  .notification-event-details {
+    padding: 10px;
+    height: 100%;
+  }
+}

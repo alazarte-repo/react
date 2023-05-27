@@ -1,0 +1,23 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.device-container {
+    height: 100%;
+    .title-container-device {
+        a {
+            transform: rotate(180deg);
+            text-decoration: none;
+            color: inherit;
+            margin-right: 20px;
+            cursor: pointer;
+
+            .icon-arrow {
+                font-size: 18px; 
+            }
+        }
+
+        button {
+            min-width: 220px;
+        }
+    }
+}

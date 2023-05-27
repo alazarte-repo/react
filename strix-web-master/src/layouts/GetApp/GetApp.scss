@@ -1,0 +1,24 @@
+@import '~styles/variables.scss';
+
+.getapp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+
+  h4 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    color: $secondary-color;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}

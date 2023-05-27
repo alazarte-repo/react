@@ -1,0 +1,25 @@
+@import '~styles/variables.scss';
+
+.home-control-item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid $item-separator;
+
+  & .label {
+    margin-right: auto;
+    color: $secondary-text-color;
+    font-size: 12pt;
+    font-weight: normal;
+  }
+
+  & .status-icon {
+    font-size: 23pt;
+    width: 50px;
+    text-align: center;
+    color: $disabled-color;
+  }
+}
+

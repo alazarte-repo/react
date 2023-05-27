@@ -1,0 +1,110 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.things-config-container{
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-bg;
+  color: $secondary-color;
+  max-height: 100%;
+  .title-container{
+    padding: 0 25px;
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    color: $secondary-color;
+    height: 68px;
+    .title-right-panel{
+      margin-right: auto;
+      margin-bottom: 18px;
+      @include font-properties(16px, $card-secondary-title-color, 500, 16px);
+    }
+    .btn-save {
+      background-color: $primary-color;
+      text-align: center;
+      padding: 5px 20px;
+      border: none;
+      max-height: 30px;
+      max-width: 120px;
+      font-size: 14px;
+
+      &:hover {
+        background-color: darken($primary-color, 15%);
+      }
+      &:disabled {
+        background-color: grey;
+      }
+    }
+    .btn-muted {
+      background-color: #e4e4e4;
+      text-align: center;
+      padding: 5px 20px;
+      border: none;
+      max-height: 30px;
+      max-width: 120px;
+      font-size: 14px;
+
+    }
+  }
+  .config-item-container{
+    display: inherit;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .config-item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #fff;
+      height: 68px;
+      padding: 0 25px 0 25px;
+      border-bottom: solid 1px #E4E4E4;
+      .label-container-config {
+        padding: auto 5%;
+        @include font-properties(14px, #5d5d5d, 400, 0);
+      }
+      .value-container-config {
+        margin-left: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        @include font-properties(17px, $primary-color, $roboto-regular, 0);
+        span {
+          cursor: pointer;
+          margin-right: auto;
+        }
+        i {
+          margin-left: auto;
+          margin-right: 0;
+          padding: 0 10px;
+          font-size: 18px;
+        }
+        input {
+          @include font-properties(14px, $primary-color, 400, 14px);
+          background-color: $footer-bg;
+          border: none;
+          box-shadow: none;
+          text-align: center;
+          &::placeholder {
+            color: $primary-color;
+          }
+          &:disabled {
+            color: $disabled-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+.NotAvailable{
+  text-align: center;
+  background-color: #fff;
+  margin-top: 25%;
+}

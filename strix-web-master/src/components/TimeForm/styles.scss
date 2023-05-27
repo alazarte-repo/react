@@ -1,0 +1,29 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.input-container {
+  & > input {
+    border: none;
+    box-shadow: none;
+    background-color: $card-panel-bg;
+    width: 150px;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 0px !important;
+    height: 34px;
+    @include font-properties(16px, $primary-color, 400, 14px);
+    &::value {
+      text-align: center;
+      @include font-properties(16px, $primary-color, 400, 14px);
+    }
+  }
+
+  input[type=time]::-webkit-inner-spin-button, 
+  input[type=time]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  input[type=time]::-webkit-clear-button {
+    display: none;
+  }
+}

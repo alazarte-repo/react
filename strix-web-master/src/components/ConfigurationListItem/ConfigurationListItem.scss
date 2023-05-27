@@ -1,0 +1,88 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.configuration-panel{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $footer-bg;
+  .title{
+    display: inherit;
+    align-items: center;
+    height: 68px;
+    padding-left: 17px;
+
+    span{
+      @include font-properties(16px, $secondary-color, 500, 0);
+    }
+  }
+  .card-basic-info-name{
+    @include font-properties(14px, #5d5d5d, 400, 10px);
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+
+    .configuration-card{
+      display: flex;
+      cursor: pointer;
+      padding-top: 30px;
+      padding-left: 17px;
+      padding-bottom: 15px;
+      height: 68px;
+      background-color: white;
+      border-bottom:solid 1px $card-panel-bg;
+      color: #5d5d5d;
+      @include transition-all(250ms);
+
+      i {
+        color: $secondary-color;
+        line-height: inherit;
+        margin-right: 20px;
+        font-size: 32px;
+      }
+
+      &:hover{
+        background-color: $item-hover;
+      }
+    }
+
+    .active {
+      color:white;
+      background-color: $secondary-color;
+
+      i {
+        color: white;
+      }
+
+      &:hover{
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+  }
+
+  .general-configuration{
+    cursor: pointer;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    height: 68px;
+    background-color: white;
+    border:solid 1px $card-panel-bg;
+    @include font-properties(14px, #5d5d5d, $roboto-regular, 0);
+    @include transition-all(250ms);
+    &:hover{
+      background-color: lighten($secondary-color, 10%);
+      color: white;
+    }
+    a{
+      margin-bottom: 30px;
+      font-size: 23px;
+      text-decoration: none;
+      cursor: pointer;
+      color: inherit;
+    }
+  }
+
+}
+
+

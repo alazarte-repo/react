@@ -1,0 +1,38 @@
+
+@import '~styles/variables.scss';
+
+.home-control {
+  background-color: $footer-bg;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+  & .header {
+    display: block;
+
+    & .title {
+      color: $primary-color;
+      font-weight: 500;
+      float: left;
+    }
+
+    & .expand-link {
+      color: $secondary-color;
+      font-weight: bold;
+      float: right;
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+.home-list {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}

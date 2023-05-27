@@ -1,0 +1,59 @@
+//Mixins
+@mixin transition-all($ms) {
+  -webkit-transition: background-color $ms linear;
+  -ms-transition: background-color $ms linear;
+  transition: background-color $ms linear;
+}
+
+@mixin strix-gradient-bottom {
+  background: linear-gradient(to bottom, #e2147e , #1f2848 )
+}
+
+@mixin strix-gradient-right {
+  background: linear-gradient(to right, #e2147e, #1f2848);
+}
+
+@mixin font-properties($size: false, $colour: false, $weight: false,  $lh: false) {
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
+
+//Defaults
+.btn {
+  @include transition-all(250ms);
+}
+
+//Helpers
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.half-padding {
+  padding-right: 7px !important;
+  padding-left: 7px !important;
+}
+
+.icon-spin {
+  animation: spin-anim 1s infinite steps(8);
+}
+
+@keyframes spin-anim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.full-height {
+  height: 100%;
+}

@@ -1,0 +1,36 @@
+@import '~styles/variables.scss';
+
+.main-layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .take-flex-rest {
+    flex-grow: 1;
+  }
+}
+
+.padded-container {
+  padding: 10px!important;
+}
+
+.padded-container-left {
+  padding: 10px 0 10px 10px!important;
+}
+
+.main-layout-inner-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: auto;
+
+  .main-layout-menu {
+    width: 130px;
+  }
+
+  .main-layout-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

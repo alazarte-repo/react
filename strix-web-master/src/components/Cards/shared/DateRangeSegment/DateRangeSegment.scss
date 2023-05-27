@@ -1,0 +1,68 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.period-container {
+  background-color: $footer-bg;
+  padding: 20px 25px;
+
+  h4 {
+    @include font-properties(14px, #5d5d5d, 400, 16px);
+    margin-top: 0;
+  }
+
+  .search-form {
+    .form-group {
+      *::-webkit-input-placeholder {
+        color: $primary-color;
+      }
+      .arrow{
+        display: none;
+      }
+      .date-picker-popover, .popover-title{
+        border-radius: 3px;
+        color: #fff;
+        background-color: $secondary-color;
+        .text-muted {
+          color: #FFF;
+        }
+        .date-picker-popover{
+          left: 30px ;
+        }
+        .popover-content{
+          tbody{
+            .text-primary{
+              color: $primary-color;
+            }
+            td{
+              min-width: 30px;
+              @include transition-all(150ms);
+              &:hover{
+                background-color: $primary-color;
+              }
+            }
+            .bg-primary{
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+      label {
+        @include font-properties(13px, #5d5d5d, 400, 13px);
+        margin-right: 15px;
+      }
+
+      input[type=text] {
+        @include font-properties(13px, $primary-color, 400, 13px);
+        background: no-repeat 95% 6px url("~images/viaje-realizado-input-bg.png") #FFF;
+        max-width: 130px;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}

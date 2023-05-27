@@ -1,0 +1,10 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.icon {
+    font-size: 9px;
+}
+
+.active-thing-card {
+  border-left: 8px solid $card-secondary-title-color;
+}  

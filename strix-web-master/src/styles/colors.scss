@@ -1,0 +1,57 @@
+@import '~styles/variables.scss';
+
+// ======================================
+//  Generic classes for foreground color
+// ======================================
+
+.color-primary-color {
+  color: $primary-color;
+}
+
+.color-secondary-color {
+  color: $secondary-color;
+}
+
+.color-secondary-color-2 {
+  color: $secondary-color-2;
+}
+
+.color-light-grey {
+  color: $light-grey;
+}
+
+.color-magenta {
+  color: $magenta;
+}
+
+.color-card-panel-bg {
+  color: $card-panel-bg;
+}
+
+.color-footer-bg {
+  color: $footer-bg;
+}
+
+.color-grey-app-background {
+  color: $grey-app-background;
+}
+
+.color-dark-app-disclaimer-background {
+  color: $dark-app-disclaimer-background;
+}
+
+.color-secondary-text-color {
+  color: $secondary-text-color;
+}
+
+.color-success-green {
+  color: $success-green;
+}
+
+.color-text-grey {
+  color: $text-grey;
+}
+
+.color-delete-color {
+  color: $delete-color;
+}

@@ -1,0 +1,17 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.config-item-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  background-color: white;
+  @include font-properties(16px, $delete-color);
+  @include transition-all(250ms);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $footer-bg;
+  }
+}

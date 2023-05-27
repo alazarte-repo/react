@@ -1,0 +1,25 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.forgot-pass-success {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  & > a > i {
+    color: $primary-color;
+    font-weight: 600;
+  }
+  & > h1 {
+    @include font-properties(24px, $primary-color, 500, 24px);
+  }
+  & > p {
+    margin-top: 10px;
+    text-align: left;
+    @include font-properties(15px, $secondary-color, 400, 15px);
+    & > a {
+      cursor: pointer;
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}

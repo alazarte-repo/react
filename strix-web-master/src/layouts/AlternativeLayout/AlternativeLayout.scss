@@ -1,0 +1,28 @@
+.main-layout-content{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  scroll-behavior: auto;
+
+  .landing-image-bg{
+    width: 30%;
+    background: no-repeat center url("~images/forgot-password.png");
+    background-size: cover;
+  }
+  .alternative-layout-content-column{
+    width: 70%;
+    display: inherit;
+  }
+}
+@media screen and (max-width: 600px){
+ .main-layout-content {
+
+   .landing-image-bg {
+     display: none;
+   }
+
+   .alternative-layout-content-column{
+     width: 100%;
+   }
+ }
+}

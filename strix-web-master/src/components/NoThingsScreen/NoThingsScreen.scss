@@ -1,0 +1,92 @@
+
+@import '~styles/variables.scss';
+
+.no-things-screen {
+  position: relative;
+  height: 100%;
+
+  .no-things-carousel {
+    background-size: cover;
+    background-image: url('img/empty-state/empty_banner_1_new.jpg');
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    .carousel-indicators {
+      bottom: 90px;
+
+      &>li {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+
+        &.active {
+          background-color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    .carousel-item {
+      height: calc(100% - 100px);
+
+      .empty-screen-item {
+        max-height: 450px;
+        height: 100%;
+        max-width: 992px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+          width: fit-content;
+
+          img {
+            max-width: 60px;
+            max-height: 60px;
+            margin: 15px;
+          }
+
+          span {
+            color: $secondary-color;
+            text-transform: uppercase;
+            font-size: 16pt;
+            max-width: 80%
+          }
+        }
+
+        & h4 {
+          color: $secondary-color;
+          text-align: center;
+        }
+
+        & p {
+          color: $secondary-color;
+          text-align: center;
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+
+  .apps-link-containers {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+
+    a {
+      margin: 0px 10px 10px 10px;
+    }
+  }
+}

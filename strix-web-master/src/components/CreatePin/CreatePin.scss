@@ -1,0 +1,46 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.create-pin-container{
+
+  h1{
+    @include font-properties(24px, $primary-color, 500, 24px);
+    margin-bottom: 40px;
+  }
+
+  p{
+    @include font-properties(15px, $secondary-color, 400, 15px);
+    line-height: 18px;
+    margin-bottom: 60px;
+    width: 30%;
+  }
+
+  .form-create-pin{
+    padding: 0;
+
+    input[type=password] {
+      border: none;
+      background-color: #F8F8F8;
+      box-shadow: none;
+      margin: 5px 0;
+      border-radius: 0;
+      width: 200px;
+    }
+
+    .btn-continuar{
+      background-color: $primary-color;
+      font-size: 1em;
+      border: 0;
+      width: 200px;
+      margin-top: 4rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .create-pin-container {
+    & > p {
+      width: 100%;
+    }
+  }
+}

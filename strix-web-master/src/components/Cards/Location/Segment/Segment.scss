@@ -1,0 +1,59 @@
+@import '~styles/variables.scss';
+@import '~styles/utils.scss';
+
+.active-thing-card {
+  border-left: 8px solid $card-secondary-title-color;
+}  
+
+.card-segment-container {
+  display: flex;
+
+  .card-segment {
+    padding: 10px 10px 10px 20px;
+    flex: 1;
+  
+    .card-segment-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2px;
+      margin-right: 40px;
+  
+      .card-segment-info-name {
+        font-weight: 500;
+        font-size: 16px;
+      }
+  
+      .card-segment-info-timeago {
+        font-size: 12px;
+        color: #a3a3a3;
+      }
+    }
+  
+    .card-segment-location {
+      span {
+        font-size: 15px;
+        color: #5d5d5d;
+        font-weight: 300;
+      }
+    }
+  }
+  .link-icon {
+    margin-right: 35px;
+    margin-top: 22px;
+
+    .icon {
+      font-size: 18px;
+      color: #8c909f;
+
+      &:hover{
+        color: $primary-color;
+        cursor: pointer;
+      }
+    } 
+
+    .icon-multiply {
+      font-size: 15px;
+    }
+  }
+}

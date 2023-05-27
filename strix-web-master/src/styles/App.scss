@@ -1,0 +1,26 @@
+@import '~styles/variables.scss';
+@import '~styles/form-controls.scss';
+@import '~styles/colors.scss';
+@import '~styles/modals.scss';
+
+html, body {
+  height: 100%;
+  overflow-y: hidden!important;
+  font-family: $roboto;
+}
+
+#app {
+  height: 100vh;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.thing-card {
+  display: block;
+  width: 100%;
+  background-color: #FFF;
+  margin-bottom: 10px;
+}
+

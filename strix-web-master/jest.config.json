@@ -1,0 +1,24 @@
+{
+  "testRegex": ".*.spec.js$",
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "^utils(.*)$": "<rootDir>/utils/$1",
+    "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/../tools/jest.mock.js",
+    "\\.(css|less|scss)$": "identity-obj-proxy"
+  },
+  "rootDir": "./src",
+  "modulePaths": ["src/"],
+  "resetMocks": true,
+  "globals": {
+    "BASE_URL": true,
+    "CLIENT_KEY": true,
+    "CLIENT_SECRET": true,
+    "GOOGLE_ANALYTICS_TRACK_ID": true,
+    "GOOGLE_TAG_MANAGER_ID": true,
+    "EVIROMENT": true
+  },
+  "setupFiles":["<rootDir>/specHelper.js"],
+  "coverageReporters": ["lcov"],
+  "coverageDirectory": "../coverage",
+  "coveragePathIgnorePatterns": ["/node_modules", "sagas/analytics.js"]
+}

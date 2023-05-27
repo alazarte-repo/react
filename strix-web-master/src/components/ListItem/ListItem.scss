@@ -1,0 +1,13 @@
+@import '~styles/variables.scss';
+
+.list-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid $item-separator;
+
+  & .label {
+    color: $secondary-text-color;
+  }
+}

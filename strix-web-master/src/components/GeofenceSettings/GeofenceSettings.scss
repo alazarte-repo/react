@@ -1,0 +1,137 @@
+@import '~styles/variables.scss';
+
+.geofence-configuration-container {
+  height: 100%;
+
+  .btn {
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: 0;
+  }
+
+  .btn-error {
+    margin-left: 5px;
+  }
+}
+
+.geofence-configuration {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.geofence-configuration-header {
+  display: flex;
+  align-items: center;
+  background-color: #F8F8F8;
+  flex-shrink: 1;
+  min-height: 62px;
+
+  & > a {
+    padding: 20px;
+    text-decoration: none;
+    color: $secondary-color;
+
+    & > .icon {
+      display: inline-block;
+      transform: scaleX(-1);
+      font-size: 18px;
+    }
+  }
+
+  & > h2 {
+    font-size: 18px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    color: $secondary-color;
+    padding-left: 20px;
+  }
+
+  & > div {
+    flex-shrink: 1;
+    padding-right: 20px;
+
+    & > .icon-spinner {
+      display: inline-block;
+      color: $primary-color;
+      font-size: 24px;
+    }
+
+    & > .btn {
+      font-size: 14px;
+      padding: 5px 20px;
+    }
+
+    & > .btn-primary {
+      background-color: $primary-color;
+      border: 0;
+    }
+
+    & > .btn-error {
+      margin-left: 5px;
+    }
+  }
+}
+
+.geofence-configuration-modal {
+  text-align: center;
+  color: $secondary-color;
+  height: auto!important;
+  padding: 10px 0 20px 0;
+
+  & .name-input {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    & > input {
+      margin: 0 10px;
+      height: 30px;
+    }
+  }
+
+  & > .btn {
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+
+  & > .btn-primary {
+    background-color: $primary-color;
+    border: 0;
+  }
+}
+
+.geofence-configuration-map {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  height: 710px;
+}
+
+.geofence-configuration-create-button {
+  position: absolute;
+  z-index: 9999;
+  color: white;
+  background-color: $primary-color;
+  border: none;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 0;
+  top: 103px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 48px;
+
+  & > .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+}

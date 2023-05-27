@@ -1,0 +1,34 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.days-selector-container {
+  .ck-button {
+    margin: 2px;
+    background-color: $card-panel-bg;
+    border-radius: 4px;
+    border: none;
+    overflow: auto;
+    float: left;
+
+    label {
+      float:left;
+      cursor: pointer;
+      width: 30px;
+      margin: 0;
+      span {
+        @include font-properties(14px, $secondary-text-color, 400, 18px);
+        text-align: center;
+        padding: 4px 0;
+        display:block;
+      }
+      input {
+        position:absolute;
+        top: -20px;
+        &:checked + span {
+          background-color: $primary-color;
+          color:#fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '~styles/variables.scss';
+
+.modal-stream {
+  & > div {
+    width: 90%;
+    height: 800;
+  }
+}

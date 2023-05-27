@@ -1,0 +1,49 @@
+@import '~styles/variables.scss';
+
+.card-additional-info {
+  display: flex;
+  flex-direction: row;
+  background-color: $footer-bg;
+  padding: 10px 15px 10px 15px;
+  align-items: center;
+
+  & > .left-indicator {
+    margin-right: auto;
+
+    & > a {
+      text-decoration: none;
+
+      & > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & > .icon {
+          color: #8c909f;
+          margin-right: 20px;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+
+  & > .right-indicator {
+    margin-right: auto;
+
+    & > a {
+      text-decoration: none;
+
+      & > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        i {
+          color: #8c909f;
+          margin-right: 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

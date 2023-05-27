@@ -1,0 +1,56 @@
+@import '~styles/variables.scss';
+
+
+.third-party-login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+
+    & .help-text {
+        color: $secondary-text-color;
+    }
+
+    & > .login-box {
+        max-width: 350px;
+        margin-bottom: 50px;
+
+        & .login-input {
+            margin-bottom: 10px;
+            color: $card-primary-text-color;
+        }
+
+        & .login-form-error-wrapper {
+            justify-content: center;
+            max-width: calc(100% - 2em);
+            margin: 0 auto;
+            margin-bottom: 1em;
+          }
+
+        & .login-form-error {
+            background-color: #FB4F4F;
+            color: white;
+            margin: 0;
+            padding: 0.5em 1em;
+            font-size: 0.8em;
+            user-select: none;
+            text-align: center;
+          }
+
+        & .login-spinner-box {
+            display: flex;
+            justify-content: center;
+
+            & i {
+                font-size: xx-large;
+                color: $primary-color;
+            }
+        }
+    }
+
+    & > .next-button {
+        align-self: flex-end;
+    }
+}

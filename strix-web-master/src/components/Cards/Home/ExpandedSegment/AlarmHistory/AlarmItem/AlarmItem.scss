@@ -1,0 +1,38 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.alarm-item-container {
+  position: relative;
+  padding: 0 25px 15px 25px;
+  &:last-child{
+    .from-data-container{
+      .timeline-icon{
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+  .from-data-container,
+  .to-data-container {
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 18px;
+    .time {
+      margin-right: 15px;
+    }
+  }
+
+  .from-data-container {
+    .address {
+      line-height: 18px;
+      color: $text-grey;
+      & > .icon {
+        color: #8c909f;
+        font-size: 18px;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

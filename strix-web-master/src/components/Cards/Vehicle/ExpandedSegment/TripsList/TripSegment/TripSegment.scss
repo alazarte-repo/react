@@ -1,0 +1,89 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+
+.result-card-container {
+  position: relative;
+  padding: 15px 25px;
+  border-bottom: 1px solid $card-panel-bg;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $card-secondary-title-color;
+  &:hover, &:active, &:focus {
+    color: $card-secondary-title-color;
+    text-decoration: none;
+  }
+
+  .from-data-container,
+  .to-data-container {
+    @include font-properties(14px, #a3a3a3, 400, 14px);
+    display: inline-block;
+    width: 70%;
+    .timeline-icon{
+      &:before{
+        height: 48px;
+      }
+    }
+    .time {
+      color: $secondary-color;
+      margin-right: 15px;
+    }
+  }
+
+  .from-data-container {
+    margin-bottom: 20px;
+  }
+
+  .link-container {
+    flex-grow: 1;
+    text-align: right;
+    background-color: #FFF;
+
+    & > .icon {
+      font-size: 24px;
+      color: #8e93a6;
+    }
+  }
+}
+
+.trips-made-segment-active {
+  background-color: #1f2848;
+  color: #fff;
+  &:before{
+    background-color: #fff;
+  }
+  .timeline-icon{
+    .start,
+    .end{
+      fill: #fff;
+    }
+  }
+  &:hover, &:active, &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+  .link-container {
+    background: transparent;
+
+    & > .icon {
+      color: #FFF;
+    }
+  }
+  .time {
+    color: #fff !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .trips-made-segment-active {
+    color: #fff;
+
+    .link-container {
+      background: transparent;
+
+      & > .icon {
+        color: #FFF;
+      }
+    }
+  }
+}

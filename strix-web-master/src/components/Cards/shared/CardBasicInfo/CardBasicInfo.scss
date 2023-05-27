@@ -1,0 +1,67 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.card-basic-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 15px 15px;
+  margin-right: 20px;
+  position: relative;
+
+  .card-basic-info-name {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid white;
+
+    & > .icon {
+      font-size: 32px;
+      color: $secondary-color;
+    }
+
+    & > .basic-info-name {
+      padding-left: 10px;
+      @include font-properties(16px, $primary-color, 500, 0);
+    }
+
+    & > .basic-info-timeago {
+      flex-grow: 1;
+      text-align: right;
+      margin-right: 10px;
+      @include font-properties(12px, $card-secondary-text-color, 400, 0);
+    }
+
+    & > .more-link-basic {
+      padding-bottom: 1px;
+      a {
+        text-decoration: none;
+        color: #8c909f;
+
+        .icon-arrow {
+          font-size: 18px;
+        }
+
+        &:hover{
+          color: $primary-color;
+        }
+      }
+      .active {
+        .icon-arrow {
+          &:before {
+            content: "\e904";
+            font-size: 16px;
+            font-weight: 500;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+  }
+  .card-basic-info-description {
+    @include font-properties(15px, $card-primary-text-color, 300, 15px);
+  }
+}
+
+

@@ -1,0 +1,53 @@
+@import '~styles/variables.scss';
+
+.verify-username {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .verification-message {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+    .text-content {
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+
+      & h1 {
+        font-weight: bold;
+        color: $secondary-color;
+      }
+
+      & p {
+          font-size: 12pt;
+      }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color !important;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+
+    .glyphicon {
+      font-size: 72pt;
+      margin-right: 15px;
+
+      &.glyphicon-remove-sign {
+        color: $error-color;
+      }
+
+      &.glyphicon-ok-sign {
+        color: $success-color;
+      }
+    }
+  }
+}

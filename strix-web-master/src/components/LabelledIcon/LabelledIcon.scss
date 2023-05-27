@@ -1,0 +1,16 @@
+@import '~styles/variables.scss';
+
+.labelled-icon {
+  padding: 10px;
+
+  & .icon {
+    display: block;
+    font-size: larger;
+    font-size: 30pt;
+    text-align: center;
+  }
+
+  & .label {
+    color: $secondary-text-color;
+  }
+}

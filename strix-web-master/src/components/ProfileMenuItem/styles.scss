@@ -1,0 +1,47 @@
+@import '~styles/variables.scss';
+@import '~styles/strix-icons.scss';
+@import '~styles/utils.scss';
+
+.profile-menu-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 40px;
+  border-bottom: solid 1px $card-panel-bg;
+  background-color: white;
+  cursor: pointer;
+  @include transition-all(250ms);
+
+  h3 {
+    @include font-properties(16px, $secondary-color, 400, 0);
+    margin-bottom: 20px;
+  }
+
+  &:hover{
+    background-color: $item-hover;
+  }
+
+  &.active {
+    background-color: $secondary-color;
+
+    h3 {
+      color: white;
+    }
+
+    a > h3 {
+      color: white;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a > h3 {
+    @include font-properties(16px, $secondary-color, 400, 0);
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,490 @@
+@import "variables";
+
+@font-face {
+  font-family: 'strix-icons';
+  src:  url('#{$icomoon-font-path}/strix-icons.eot?ymy22q');
+  src:  url('#{$icomoon-font-path}/strix-icons.eot?ymy22q#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/strix-icons.ttf?ymy22q') format('truetype'),
+    url('#{$icomoon-font-path}/strix-icons.woff?ymy22q') format('woff'),
+    url('#{$icomoon-font-path}/strix-icons.svg?ymy22q#strix-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'strix-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-service-moto {
+  &:before {
+    content: $icon-service-moto;
+  }
+}
+.icon-collapse-arrow {
+  &:before {
+    content: $icon-collapse-arrow;
+  }
+}
+.icon-shared-location {
+  &:before {
+    content: $icon-shared-location;
+  }
+}
+.icon-checked {
+  &:before {
+    content: $icon-checked;
+  }
+}
+.icon-multiply {
+  &:before {
+    content: $icon-multiply;
+  }
+}
+.icon-service_test {
+  &:before {
+    content: $icon-service_test;
+  }
+}
+.icon-service-agenda {
+  &:before {
+    content: $icon-service-agenda;
+    color: #fff;
+  }
+}
+.icon-alarm-calendar {
+  &:before {
+    content: $icon-alarm-calendar;
+    color: #78748c;
+  }
+}
+.icon-add-sign {
+  &:before {
+    content: $icon-add-sign;
+  }
+}
+.icon-alarm-on {
+  &:before {
+    content: $icon-alarm-on;
+  }
+}
+.icon-alarm-off {
+  &:before {
+    content: $icon-alarm-off;
+  }
+}
+.icon-auto {
+  &:before {
+    content: $icon-auto;
+  }
+}
+.icon-battery-mid {
+  &:before {
+    content: $icon-battery-mid;
+  }
+}
+.icon-battery-low {
+  &:before {
+    content: $icon-battery-low;
+  }
+}
+.icon-battery-full {
+  &:before {
+    content: $icon-battery-full;
+  }
+}
+.icon-home {
+  &:before {
+    content: $icon-home;
+  }
+}
+.icon-arrow {
+  &:before {
+    content: $icon-arrow;
+  }
+}
+.icon-arrow-expanded {
+  &:before {
+    content: $icon-arrow-expanded;
+  }
+}
+.icon-ontrip {
+  &:before {
+    content: $icon-ontrip;
+  }
+}
+.icon-flex {
+  &:before {
+    content: $icon-flex;
+  }
+}
+.icon-notification {
+  &:before {
+    content: $icon-notification;
+  }
+}
+.icon-dates {
+  &:before {
+    content: $icon-dates;
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user;
+  }
+}
+.icon-velocity {
+  &:before {
+    content: $icon-velocity;
+  }
+}
+.icon-safe-place {
+  &:before {
+    content: $icon-safe-place;
+  }
+}
+.icon-operations {
+  &:before {
+    content: $icon-operations;
+  }
+}
+.icon-configuration {
+  &:before {
+    content: $icon-configuration;
+  }
+}
+.icon-strix {
+  &:before {
+    content: $icon-strix;
+  }
+}
+.icon-profile {
+  &:before {
+    content: $icon-profile;
+  }
+}
+.icon-bills {
+  &:before {
+    content: $icon-bills;
+  }
+}
+.icon-car-pin {
+  &:before {
+    content: $icon-car-pin;
+  }
+}
+.icon-home-pin {
+  &:before {
+    content: $icon-home-pin;
+  }
+}
+.icon-flex-pin {
+  &:before {
+    content: $icon-flex-pin;
+  }
+}
+.icon-service-car {
+  &:before {
+    content: $icon-service-car;
+  }
+}
+.icon-service-home {
+  &:before {
+    content: $icon-service-home;
+  }
+}
+.icon-service-custody {
+  &:before {
+    content: $icon-service-custody;
+  }
+}
+.icon-service-flex {
+  &:before {
+    content: $icon-service-flex;
+  }
+}
+.icon-alarm-calendar2 {
+  &:before {
+    content: $icon-alarm-calendar2;
+  }
+}
+.icon-service-agenda2 {
+  &:before {
+    content: $icon-service-agenda2;
+  }
+}
+.icon-checked2 {
+  &:before {
+    content: $icon-checked2;
+  }
+}
+.icon-add-sign2 {
+  &:before {
+    content: $icon-add-sign2;
+  }
+}
+.icon-multiply2 {
+  &:before {
+    content: $icon-multiply2;
+  }
+}
+.icon-service_test2 {
+  &:before {
+    content: $icon-service_test2;
+  }
+}
+.icon-technical_verification {
+  &:before {
+    content: $icon-technical_verification;
+  }
+}
+.icon-official_service {
+  &:before {
+    content: $icon-official_service;
+  }
+}
+.icon-tire_rotation {
+  &:before {
+    content: $icon-tire_rotation;
+  }
+}
+.icon-fluids_control {
+  &:before {
+    content: $icon-fluids_control;
+  }
+}
+.icon-drivers_license_renewal {
+  &:before {
+    content: $icon-drivers_license_renewal;
+  }
+}
+.icon-distribution_kit_control {
+  &:before {
+    content: $icon-distribution_kit_control;
+  }
+}
+.icon-polen_filter_change {
+  &:before {
+    content: $icon-polen_filter_change;
+  }
+}
+.icon-fuel_filter_change {
+  &:before {
+    content: $icon-fuel_filter_change;
+  }
+}
+.icon-air_filter_change {
+  &:before {
+    content: $icon-air_filter_change;
+  }
+}
+.icon-brakes_control {
+  &:before {
+    content: $icon-brakes_control;
+  }
+}
+.icon-oil_change {
+  &:before {
+    content: $icon-oil_change;
+  }
+}
+.icon-spark_plugs_change {
+  &:before {
+    content: $icon-spark_plugs_change;
+  }
+}
+.icon-suspension_change {
+  &:before {
+    content: $icon-suspension_change;
+  }
+}
+.icon-alarm-on2 {
+  &:before {
+    content: $icon-alarm-on2;
+  }
+}
+.icon-alarm-off2 {
+  &:before {
+    content: $icon-alarm-off2;
+  }
+}
+.icon-auto2 {
+  &:before {
+    content: $icon-auto2;
+  }
+}
+.icon-notification2 {
+  &:before {
+    content: $icon-notification2;
+  }
+}
+.icon-dates2 {
+  &:before {
+    content: $icon-dates2;
+  }
+}
+.icon-flex-pin2 {
+  &:before {
+    content: $icon-flex-pin2;
+  }
+}
+.icon-service-car2 {
+  &:before {
+    content: $icon-service-car2;
+  }
+}
+.icon-service-home2 {
+  &:before {
+    content: $icon-service-home2;
+  }
+}
+.icon-service-custody2 {
+  &:before {
+    content: $icon-service-custody2;
+  }
+}
+.icon-user2 {
+  &:before {
+    content: $icon-user2;
+  }
+}
+.icon-safe-place2 {
+  &:before {
+    content: $icon-safe-place2;
+  }
+}
+.icon-velocity2 {
+  &:before {
+    content: $icon-velocity2;
+  }
+}
+.icon-service-flex2 {
+  &:before {
+    content: $icon-service-flex2;
+  }
+}
+.icon-battery-mid2 {
+  &:before {
+    content: $icon-battery-mid2;
+  }
+}
+.icon-battery-low2 {
+  &:before {
+    content: $icon-battery-low2;
+  }
+}
+.icon-battery-full2 {
+  &:before {
+    content: $icon-battery-full2;
+  }
+}
+.icon-operations2 {
+  &:before {
+    content: $icon-operations2;
+  }
+}
+.icon-configuration2 {
+  &:before {
+    content: $icon-configuration2;
+  }
+}
+.icon-home2 {
+  &:before {
+    content: $icon-home2;
+  }
+}
+.icon-arrow2 {
+  &:before {
+    content: $icon-arrow2;
+  }
+}
+.icon-arrow-expanded2 {
+  &:before {
+    content: $icon-arrow-expanded2;
+  }
+}
+.icon-ontrip2 {
+  &:before {
+    content: $icon-ontrip2;
+  }
+}
+.icon-flex2 {
+  &:before {
+    content: $icon-flex2;
+  }
+}
+.icon-home-pin2 {
+  &:before {
+    content: $icon-home-pin2;
+  }
+}
+.icon-car-pin2 {
+  &:before {
+    content: $icon-car-pin2;
+  }
+}
+.icon-bills2 {
+  &:before {
+    content: $icon-bills2;
+  }
+}
+.icon-profile2 {
+  &:before {
+    content: $icon-profile2;
+  }
+}
+.icon-strix2 {
+  &:before {
+    content: $icon-strix2;
+  }
+}
+.icon-spinner2 {
+  &:before {
+    content: $icon-spinner2;
+  }
+}
+.icon-spinner {
+  &:before {
+    content: $icon-spinner;
+  }
+}
+.icon-blocked {
+  &:before {
+    content: $icon-blocked;
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email;
+  }
+}
+.icon-forward {
+  &:before {
+    content: $icon-forward;
+  }
+}
+.icon-link {
+  &:before {
+    content: $icon-link;
+  }
+}
+.icon-refresh {
+  &:before {
+    content: $icon-refresh;
+  }
+}
+.icon-no-connection {
+  &:before {
+    content: $icon-no-connection;
+  }
+}

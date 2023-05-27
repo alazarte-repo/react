@@ -1,0 +1,186 @@
+{
+  "name": "LOJACK",
+  "version": "0.0.1",
+  "description": "Strix SPA",
+  "engines": {
+    "npm": ">=3"
+  },
+  "scripts": {
+    "start-message": "babel-node tools/startMessage.js",
+    "prestart": "npm-run-all --parallel start-message",
+    "start": "npm run open:src",
+    "open:src": "webpack-dev-server --port 9000 --inline --hot --history-api-fallback --open --config ./webpack.config.dev.js",
+    "open:dist": "http-server-spa ./dist /index.html 8080",
+    "open:dist-test": "http-server-spa ./dist /index.html 8080",
+    "lint": "esw webpack.config.* src tools --ext .js,.jsx --color --config ./.eslintrc",
+    "lint:watch": "npm run lint -- --watch",
+    "localtunnel": "lt --port 4000 --subdomain lojack",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist",
+    "prebuild": "npm run clean-dist && npm run lint && npm run test",
+    "build": "babel-node tools/build.js && npm run open:dist",
+    "build:static": "babel-node tools/build.js",
+    "build:start-test": "babel-node tools/build.js && npm run open:dist-test",
+    "build-jenkins": "npm run prebuild && babel-node tools/build.js",
+    "security-check": "nsp check",
+    "share": "npm-run-all --parallel open:dist localtunnel",
+    "test": "jest --coverage --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch",
+    "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
+    "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
+    "generate-mock-data": "babel-node tools/generateMockData",
+    "prestart-mock-api": "npm run clean-mock-api && npm run generate-mock-data",
+    "clean-mock-api": "npm run remove-mock-api && mkdir api",
+    "remove-mock-api": "rimraf ./api",
+    "start-mock-api": "json-server --watch ./api/things.json --port 8080"
+  },
+  "private": true,
+  "dependencies": {
+    "async-mutex": "0.1.3",
+    "axios": "0.19.0",
+    "clientjs": "0.1.11",
+    "connected-react-router": "6.5.2",
+    "create-react-class": "^15.5.2",
+    "history": "4.9.0",
+    "http-server-spa": "1.3.0",
+    "immutable": "4.0.0-rc.12",
+    "lodash": "4.17.15",
+    "lodash.memoize": "4.1.2",
+    "moment": "2.24.0",
+    "moment-duration-format": "2.3.2",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-16-bootstrap-date-picker": "5.1.2",
+    "react-bootstrap": "0.32.4",
+    "react-custom-scrollbars": "4.2.1",
+    "react-dom": "16.8.6",
+    "react-drag-and-drop": "2.4.0",
+    "react-ga": "2.6.0",
+    "react-google-maps": "9.4.5",
+    "react-gtm-module": "2.0.2",
+    "react-ios-switch": "0.1.19",
+    "react-player": "1.6.4",
+    "react-redux": "6.0.0",
+    "react-router": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "react-toastify": "3.2.2",
+    "redux": "4.0.4",
+    "redux-immutable": "4.0.0",
+    "redux-saga": "1.0.5",
+    "reselect": "4.0.0",
+    "yarn": "1.22.4"
+  },
+  "devDependencies": {
+    "@redux-saga/testing-utils": "1.0.5",
+    "autoprefixer": "7.1.2",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.1",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.6",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-0": "6.24.1",
+    "babel-preset-stage-1": "6.24.1",
+    "browser-sync": "2.18.12",
+    "chalk": "2.0.1",
+    "compression": "1.7.0",
+    "connect-history-api-fallback": "1.3.0",
+    "copy-webpack-plugin": "4.0.1",
+    "coveralls": "2.13.1",
+    "css-loader": "0.28.4",
+    "enzyme": "2.9.1",
+    "eslint": "4.2.0",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-config-airbnb-base": "11.3.1",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.1.0",
+    "eslint-watch": "3.1.2",
+    "express": "4.15.3",
+    "extract-text-webpack-plugin": "3.0.0-rc.2",
+    "file-loader": "0.11.2",
+    "html-webpack-plugin": "2.29.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "20.0.4",
+    "json-loader": "0.5.4",
+    "json-schema-faker": "0.4.3",
+    "json-server": "0.12.0",
+    "mockdate": "2.0.1",
+    "node-sass": "4.14.1",
+    "npm-run-all": "4.0.2",
+    "nsp": "2.6.3",
+    "opn-cli": "3.1.0",
+    "postcss-loader": "1.2.1",
+    "prompt": "1.0.0",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-test-renderer": "15.5.4",
+    "redux-immutable-state-invariant": "2.0.0",
+    "redux-saga-test-plan": "4.0.0-beta.3",
+    "replace": "0.3.0",
+    "resolve-url-loader": "2.1.0",
+    "rimraf": "2.6.1",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.18.2",
+    "url-loader": "0.5.9",
+    "webpack": "3.1.0",
+    "webpack-bundle-analyzer": "2.8.2",
+    "webpack-dev-middleware": "1.11.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-hot-middleware": "2.18.2",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-2"
+    ],
+    "env": {
+      "development": {
+        "presets": [
+          "env",
+          "react-hmre"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          "transform-object-rest-spread",
+          "transform-runtime"
+        ]
+      },
+      "production": {
+        "presets": [
+          [
+            "env",
+            {
+              "es2015": {
+                "modules": false
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          "transform-react-constant-elements",
+          "transform-react-remove-prop-types",
+          "transform-class-properties",
+          "transform-object-rest-spread",
+          "transform-runtime"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env"
+        ]
+      }
+    }
+  }
+}

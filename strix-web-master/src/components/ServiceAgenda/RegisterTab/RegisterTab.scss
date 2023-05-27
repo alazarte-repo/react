@@ -1,0 +1,125 @@
+@import '~styles/utils.scss';
+@import '~styles/variables.scss';
+@import '~styles/screen-sizes.scss';
+
+.register-tab-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  flex: 1;
+  height: 1px;
+
+  .register-header {
+    background-color: $footer-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1px;
+    padding: 20px;
+    h4 {
+      display: inline-block;
+      position: relative;
+      @include font-properties(16px, $card-secondary-title-color, $roboto-medium, 14px);
+    }
+  }
+
+  .register-tab-list {
+    padding: 10px;
+  }
+
+  .search-form {
+    padding: 5px 0;
+
+    .form-group {
+      width: 100%;
+      text-align:center;
+      padding: 10px;
+
+      *::-webkit-input-placeholder {
+        color: $primary-color;
+      }
+
+      .date-picker-popover, .popover-title{
+        border-radius: 3px;
+        color: $primary-background-color;
+        background-color: $secondary-color;
+
+        .text-muted {
+          color: $primary-background-color;
+        }
+
+        .date-picker-popover{
+          left: 30px ;
+        }
+
+        .popover-content{
+
+          tbody{
+            .text-primary{
+              color: $primary-color;
+            }
+
+            td{
+              min-width: 30px;
+              @include transition-all(150ms);
+              &:hover{
+                background-color: $primary-color;
+              }
+            }
+
+            .bg-primary{
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+
+      .header-control {
+        width: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include respond-to(less-smallest-screens) { flex-direction: column; }
+        @include respond-to(smallest-screens) { flex-direction: column; }
+        @include respond-to(small-screens) { flex-direction: column; }
+        @include respond-to(medium-screens) { flex-direction: column; }
+        @include respond-to(large-screens) { flex-direction: row; }
+        @include respond-to(largest-screens) { flex-direction: row; }
+      }
+
+      input[type=text] {
+        @include font-properties(16px, $primary-color, $roboto-regular, 13px);
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 150px;
+        margin-left: 10px;
+        background-color: $footer-bg;
+      }
+
+      .form-control:nth-child(1) {
+        background: no-repeat 95% 6px url("~images/viaje-realizado-input-bg.png") $primary-background-color;
+        padding-right: 32px;
+        margin-left: 10px;
+        max-width: 150px;
+        background-color: $footer-bg;
+      }
+    }
+  }
+
+  .reminder-item {
+    height: 40px;
+    padding: 10px 15px;
+    border-bottom: 1px solid $item-separator;
+    display: flex;
+
+    &:first-of-type {
+      border-top: 1px solid $item-separator;
+    }
+
+    .reminder-name {
+      flex-grow: 1;
+    }
+  }
+}
